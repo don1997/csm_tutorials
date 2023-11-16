@@ -10,6 +10,8 @@
 * Stuff TODO
 ## Preliminary Important!
 
+---
+
 - Before doing all of this lets install a fresh copy of `csm` into your Clones Directory.
 	*  **Rationale:** I've made alot of changes to the codebase and git pull is acting up.
 	* Also your venv is most likely going to break so that would mean removing and remaking a new instance.
@@ -18,18 +20,17 @@
 
 ## Install Instructions
 
-This will be similar to the previous set of instructions that we did last time except this time we don't even need to manually delete `greenlet`. 
+This will be similar to the previous set of instructions that we did last time except this time we don't even need to manually delete `greenlet` and the command to run is different.
 
 0. `git clone https://github.com/don1997/csm.git` # Clone in your `\Clones` directory.
 1. First cd into the root of `\csm` if you haven't done so.
 2. `git checkout v0.5.0` # switch to dev branch
 3. `git branch` # Ensure your branch is set to v0.5.0
 4. `python -m venv venv` # Install our venv
-5. ----------------------------------------------------------  REPEAT here if you have already done the steps above for an initial installation and you want to run the app.
-6. `venv\Scripts\Activate.ps1` # Activate our venv script
-7. `pip install -r .\requirements.txt` # Install deps
-8. `flask run`  # Run our app
-9. `deactivate`  # deactivate venv when finished
+5. `venv\Scripts\Activate.ps1` # Activate our venv script
+6. `pip install -r .\requirements.txt` # Install deps
+7. `python src\run.py`  # Run our app
+8. `deactivate`  # deactivate venv when finished
 
 ## Unit Testing Crash Course
 
@@ -52,6 +53,11 @@ So the three step process most associate with is:
 3. Refactor
 
 So generally the desired workflow for implementing features is to think of a feature you want then write out the test cases for it, then write your code until you pass your test cases you made prior. 
+
+
+
+![image](tdd.jpg)
+
 ### AAA
 
 AAA is a **testing pattern** and its process is in the name itself. 
@@ -161,3 +167,9 @@ not_imp_test.py - Shows how to skip a test. Can be useful if we want to write un
 
 The docs for pytest:
 https://docs.pytest.org/en/7.4.x/
+
+## TODO
+* Make unit tests for our routes and db operations.
+* Make unit tests for our future features such as searching, tagging, pygments, etc.
+* Make our smoke tests.
+* Set up our page error handling.
