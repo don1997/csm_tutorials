@@ -142,6 +142,8 @@ Also I've already went ahead and made a custom marking and directory for smoke t
 
 Essentially the custom marking allows us to run the that test simply `pytest -m smoke`
 
+Also by default pytest wont show you print() statement outputs on tests that pass. To bypass this if you want to see output do add the -s flag to pytest so `pytest -s`.
+
 ### How to write unit tests
 
 I've made several examples our /tests directory.
